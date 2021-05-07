@@ -20,9 +20,9 @@ Para executar esse projeto em sua máquina basta clonar esse repositório usando
 
 * Quando esse projeto é clonado em sua máquina as dependências do projeto não estão instaladas então é necessário executar um comando no diretório do projeto para baixar as dependências.
 
-```
-composer update
-```
+	```
+	composer update
+	```
 
 #### Configurar arquivo .env
 
