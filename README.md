@@ -43,12 +43,10 @@ Para executar esse projeto em sua máquina basta clonar esse repositório usando
 
 #### Configurar o cliente MQTT
 
-	* Coloque os certificados na pasta [certificates](https://github.com/JohnnySanttana72/automacao-resencial/tree/main/certificates) ou em outra pasta qualquer, o caminho absoluto será pego usando a função do PHP **base_path()**, só é necessário indicar a pasta onde está o certificado;
+* Coloque os certificados na pasta [certificates](https://github.com/JohnnySanttana72/automacao-resencial/tree/main/certificates) ou em outra pasta qualquer, o caminho absoluto será pego usando a função do PHP **base_path()**, só é necessário indicar a pasta onde está o certificado;
 
-	* Vá até o arquivo [mqtt-cliente.php](https://github.com/JohnnySanttana72/automacao-resencial/blob/main/config/mqtt-client.php);
+* Vá até o arquivo [mqtt-cliente.php](https://github.com/JohnnySanttana72/automacao-resencial/blob/main/config/mqtt-client.php) e altere os seguintes campos:
 
-	* Altere os seguintes campos:
-	
 	```
 	'host' => env('MQTT_HOST', 'AWS-end-point.us-east-1.amazonaws.com'),
 	.
