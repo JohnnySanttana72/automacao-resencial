@@ -2,7 +2,7 @@
 
 Protótipo de página Web para o controle de um microcontrolador. 
 
-## Getting Started
+## Começando
 
 Para executar esse projeto em sua máquina basta clonar esse repositório usando o git-bash ou Github desktop ou simplismente baixando todo o projeto. 
 
