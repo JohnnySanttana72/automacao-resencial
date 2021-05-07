@@ -941,7 +941,7 @@
 
                 time_subscribe = setTimeout(function () {
                     subscribe(topic)
-                }, 6000);
+                }, 7000);
             },
             statusCode: {
                 500: function () {
