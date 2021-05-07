@@ -41,6 +41,30 @@ Para executar esse projeto em sua máquina basta clonar esse repositório usando
 	DB_PASSWORD=senha_se_houver_se_não_houver_pode_deixar_vazio
 	```
 
+#### Configurar o cliente MQTT
+
+	* Coloque os certificados na pasta [certificates](https://github.com/JohnnySanttana72/automacao-resencial/tree/main/certificates) ou em outra pasta qualquer, o caminho absoluto será pego usando a função do PHP **base_path()**, só é necessário indicar a pasta onde está o certificado;
+
+	* Vá até o arquivo [mqtt-cliente.php](https://github.com/JohnnySanttana72/automacao-resencial/blob/main/config/mqtt-client.php);
+
+	* Altere os seguintes campos:
+	
+	```
+	'host' => env('MQTT_HOST', 'AWS-end-point.us-east-1.amazonaws.com'),
+	.
+	.
+	.
+	'tls' => [
+	.
+	.
+	.
+		'ca_file' => env('MQTT_TLS_CA_FILE', base_path().'/certificates/AmazonRootCA1.pem'),
+		'ca_path' => env('MQTT_TLS_CA_PATH', base_path().'/certificates'),
+		'client_certificate_file' => env('MQTT_TLS_CLIENT_CERT_FILE',  base_path().'/certificates/certificate.pem.crt'),
+		'client_certificate_key_file' => env('MQTT_TLS_CLIENT_CERT_KEY_FILE', base_path().'/certificates/private.pem.key'),
+	],
+	```
+
 ## Executar
 
 * Iniciar o XAMPP e executar o MySql;
